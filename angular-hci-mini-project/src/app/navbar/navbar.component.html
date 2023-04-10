@@ -1,0 +1,21 @@
+<mat-toolbar color="accent" fxLayoutAlign="space-between center">
+   
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public" *ngIf="deviceXs"></mat-icon>
+    <div *ngIf="!deviceXs">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public"></mat-icon>
+        Amazing Geography</div>
+    <div>
+        <input class="inputfield" matInput [formControl]="countryControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let item of filteredOptions | async" [value]="item">
+                {{ item}}
+            </mat-option>
+        </mat-autocomplete>
+    </div>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search" *ngIf="deviceXs" (click)="dugme()"></mat-icon>
+    <button mat-button color="accent" class="button" (click)="dugme()" *ngIf="!deviceXs">Get Details</button> 
+    
+
+
+</mat-toolbar>
+  
