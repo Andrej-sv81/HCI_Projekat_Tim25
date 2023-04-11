@@ -1,4 +1,13 @@
-<mat-grid-list cols="3" rowHeight="200px" gutterSize="16px">
+<mat-grid-list *ngIf="!deviceXs" [cols]="3" rowHeight="200px" gutterSize="16px">
+    <mat-grid-tile *ngFor="let item of countryList">
+        <mat-card fxLayout="row" fxLayoutAlgin="space-around center" (click)="onShowDetails(item.name)">
+            <div style="min-width: 120px; font-size: 15px; font-weight: bolder; text-align: center; margin-top: 50px;">{{item.name}}</div>
+            <img src="{{item.flag}}" class="image">
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list *ngIf="deviceXs" [cols]="1" rowHeight="200px" gutterSize="16px">
     <mat-grid-tile *ngFor="let item of countryList">
         <mat-card fxLayout="row" fxLayoutAlgin="space-around center" (click)="onShowDetails(item.name)">
             <div style="min-width: 120px; font-size: 15px; font-weight: bolder; text-align: center; margin-top: 50px;">{{item.name}}</div>
