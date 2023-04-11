@@ -13,6 +13,8 @@ export class AppComponent implements OnInit{
   countires: any[] = [];
   deviceXs!: boolean;
   country!: Country;
+  showDetails: boolean = false;
+  showCountries: boolean = false;
   
   constructor(private jsonParser: JsonParserService, public mediaObserver: MediaObserver){
       mediaObserver
@@ -80,6 +82,25 @@ export class AppComponent implements OnInit{
     }
     this.country = country;
     console.log(this.country);
+    this.showDetails = true;
+  }
+
+  closeDetails(){
+    this.showDetails = false;
+    const country: Country = {
+      name: '',
+      flag: '',
+      population: 0,
+      area: 0,
+      capital: '',
+      languages: '',
+      latitude: 0,
+      longitude: 0,
+      continents: '',
+      timezones: '',
+      map: ''
+    };
+    this.country = country;
   }
 }
 

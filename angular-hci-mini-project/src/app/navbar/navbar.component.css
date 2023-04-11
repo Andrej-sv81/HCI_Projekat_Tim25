@@ -2,6 +2,15 @@
     background-color: black;
 }
 .inputfield{
-    width: 110%;
-    height: 25px
+    max-width: 110%;
+    height: 35px;
+    font-size: 18px;
+}
+.show-icon{
+    cursor: pointer;
+}
+
+.logoText{
+    font-size: 29px;
+    font-style: oblique;
 }

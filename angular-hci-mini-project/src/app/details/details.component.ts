@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Country } from '../country-details-model';
 
 @Component({
@@ -9,9 +9,12 @@ import { Country } from '../country-details-model';
 export class DetailsComponent {
   @Input() deviceXs!: boolean;
   @Input() country!: Country;
+  @Output("closeDetails") closeDetails: EventEmitter<any> = new EventEmitter();
+  close(){
 
-  test(){
-
-    console.log(this.country);
   }
+
+  onCloseDetails(){
+    this.closeDetails.emit();
+  };
 }

@@ -1,6 +1,7 @@
 .card{
     height: 80%;
     width: 80%;
+    font-size: 18px;
 }
 
 .cardDiv{
@@ -47,3 +48,8 @@ label{
     max-width: 250px;
     max-height: 150px;
 }
+
+.close-icon{
+    cursor: pointer;
+}
+

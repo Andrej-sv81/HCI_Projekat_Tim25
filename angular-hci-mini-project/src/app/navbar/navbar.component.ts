@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit{
   }
 
 
-  dugme():void{
+  showDetails():void{
     if(this.countryControl !== undefined &&
        this.countryControl.value !== null &&
         this.options.includes(this.countryControl.value)){
