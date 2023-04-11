@@ -17,7 +17,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DetailsComponent } from './details/details.component'
 import { MatCardModule } from '@angular/material/card'; 
 import {MatDividerModule} from '@angular/material/divider';
-import { SimpleComponent } from './simple/simple.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ListComponent,
     NavbarComponent,
     DetailsComponent,
-    SimpleComponent
   ],
   imports: [
     BrowserModule,

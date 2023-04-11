@@ -1,7 +1,9 @@
-<mat-grid-list cols="3" rowHeight="100px" gutterSize="16px">
-    <mat-card *ngFor="let item of countryList" fxLayout="row" (click)="onShowDetails(item.name)">
-        <span>{{item.name}}</span>
-        <img src="{{item.flag}}" class="image">
-    </mat-card>
+<mat-grid-list cols="3" rowHeight="200px" gutterSize="16px">
+    <mat-grid-tile *ngFor="let item of countryList">
+        <mat-card fxLayout="row" fxLayoutAlgin="space-around center" (click)="onShowDetails(item.name)">
+            <div style="min-width: 120px; font-size: 15px; font-weight: bolder; text-align: center; margin-top: 50px;">{{item.name}}</div>
+            <img src="{{item.flag}}" class="image">
+        </mat-card>
+    </mat-grid-tile>
 </mat-grid-list>
   

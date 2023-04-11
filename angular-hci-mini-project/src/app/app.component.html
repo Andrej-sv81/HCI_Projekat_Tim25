@@ -1,7 +1,7 @@
 <app-navbar (getAll)="getAll($event)" (getDetails)="getDetails($event)" [deviceXs]="deviceXs"></app-navbar>
 
 <app-details *ngIf="showDetails" (closeDetails)="closeDetails()" [country]="country" [deviceXs]="deviceXs"></app-details>
-<app-list *ngIf="showCountries" [countryList]="countryList" (getDetails)="getDetails($event)"></app-list>
+<app-list *ngIf="showCountries" [countryList]="countryList" (getDetails)="getDetails($event)" [deviceXs]="deviceXs"></app-list>
 <div *ngIf="!showDetails && !showCountries" class="image-div">
   <img  src="https://t4.ftcdn.net/jpg/02/43/47/67/360_F_243476769_d15WIB1ERQTzvRW51NTMOi5guTvoBOrf.jpg" class="image">
 </div>

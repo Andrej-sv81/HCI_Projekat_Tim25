@@ -88,6 +88,7 @@ export class AppComponent implements OnInit{
     console.log(this.country);
     this.showDetails = true;
     this.showCountries = false;
+    this.countryList = [];
   }
 
   closeDetails(){
