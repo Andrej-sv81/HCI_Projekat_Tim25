@@ -59,7 +59,5 @@ label{
     height: 650px;
     width: 90%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 }

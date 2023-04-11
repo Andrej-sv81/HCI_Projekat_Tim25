@@ -16,14 +16,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DetailsComponent } from './details/details.component'
 import { MatCardModule } from '@angular/material/card'; 
-import {MatDividerModule} from '@angular/material/divider'; 
+import {MatDividerModule} from '@angular/material/divider';
+import { SimpleComponent } from './simple/simple.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     NavbarComponent,
-    DetailsComponent
+    DetailsComponent,
+    SimpleComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatFormFieldModule,
     FlexLayoutModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

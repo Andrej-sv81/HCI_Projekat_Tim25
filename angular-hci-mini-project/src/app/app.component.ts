@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { JsonParserService } from './json-parser.service';
 import { MediaChange, MediaObserver} from '@angular/flex-layout'
-import { filter } from "rxjs"
+import { filter, pipe } from "rxjs"
 import { Country } from './country-details-model';
+import { CountrySimple } from './country-simple-model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
   title = 'Amazing Geography';
   countires: any[] = [];
+  countiresFiltered: any[] = []
   deviceXs!: boolean;
   country!: Country;
+  countryList: CountrySimple[] = [];
   showDetails: boolean = false;
   showCountries: boolean = false;
   
@@ -83,6 +87,7 @@ export class AppComponent implements OnInit{
     this.country = country;
     console.log(this.country);
     this.showDetails = true;
+    this.showCountries = false;
   }
 
   closeDetails(){
@@ -101,6 +106,16 @@ export class AppComponent implements OnInit{
       map: ''
     };
     this.country = country;
+  }
+
+  getAll(startsWithString: string) {
+    this.countiresFiltered = this.countires.filter(item => item.name.common.toLowerCase().includes(startsWithString.toLowerCase()));
+    console.log(this.countiresFiltered);
+    for(let item of this.countiresFiltered){
+      this.countryList.push({name: item.name.common,
+                              flag: item.flags.png});
+    }
+    this.showCountries = true;
   }
 }
 

@@ -1,10 +1,10 @@
 <mat-toolbar color="accent" fxLayoutAlign="space-between center">
    
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public" *ngIf="deviceXs"></mat-icon>
-    <div *ngIf="!deviceXs" class="logoText">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public"></mat-icon>
-        Amazing Geography
+    <div *ngIf="deviceXs">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public" ></mat-icon>
     </div>
+    <div *ngIf="!deviceXs" class="logoText">
+        Amazing Geography</div>
     <div>
         <input class="inputfield" matInput [formControl]="countryControl" [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete">
@@ -13,9 +13,12 @@
             </mat-option>
         </mat-autocomplete>
     </div>
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search" *ngIf="deviceXs" (click)="showDetails()" class="show-icon"></mat-icon>
-    <button mat-button color="accent" class="button" (click)="showDetails()" *ngIf="!deviceXs">Details</button> 
-    
+        <div>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search" *ngIf="deviceXs" (click)="showDetails()" class="show-icon" style="margin-right: 5px;"></mat-icon>
+        <button mat-button color="accent" class="button" (click)="showDetails()" *ngIf="!deviceXs" style="margin-right: 5px;">Details</button> 
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="dataset" *ngIf="deviceXs" (click)="onGetAll()" class="show-icon"></mat-icon>
+        <button mat-button color="accent" class="button" (click)="onGetAll()" *ngIf="!deviceXs">Search</button> 
+    </div>
 
 
 </mat-toolbar>

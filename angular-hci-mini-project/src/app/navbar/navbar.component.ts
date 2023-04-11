@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit{
   countryControl = new FormControl('');
   @Input() deviceXs!: boolean;
   @Output("getDetails") getDetails: EventEmitter<any> = new EventEmitter();
+  @Output("getAll") getAll: EventEmitter<any> = new EventEmitter();
   
   ngOnInit(){
     const stringList = localStorage.getItem('list');
@@ -46,5 +47,9 @@ export class NavbarComponent implements OnInit{
     }else{
       this.getDetails.emit('');
     }
+  }
+
+  onGetAll(){
+    this.getAll.emit(this.countryControl.value !== null ? this.countryControl.value : "");
   }
 }
