@@ -65,7 +65,7 @@ export class AppComponent implements OnInit{
     for(let item of this.countires){
       if(item.name.common == name){
         country.name = item.name.common;
-        country.flag = item.flag;
+        country.flag = item.flags.png;
         country.population = item.population;
         country.area = item.area;
         country.capital = item.capital[0];

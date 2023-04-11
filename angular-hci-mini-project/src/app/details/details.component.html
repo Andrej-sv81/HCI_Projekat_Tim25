@@ -3,7 +3,8 @@
         <div class="header-div" fxLayout="row" fxLayoutAlign="space-between center">
                 <span style="margin-left: 15px;">{{country.name}}</span>
                 <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
-                <span>{{country.flag}}</span>
+                <img src="{{country.flag}}"  class="image1" *ngIf="deviceXs">
+                <img src="{{country.flag}}"  class="image2" *ngIf="!deviceXs">
                 <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
                 <button class="mat-button" mat-button color="accent" *ngIf="!deviceXs" (click)="test()">Button</button>
                 <mat-icon style="margin-right: 15px;"aria-hidden="false" aria-label="Example home icon" fontIcon="close" *ngIf="deviceXs"></mat-icon>
