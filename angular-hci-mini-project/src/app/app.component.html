@@ -1,6 +1,7 @@
-<app-navbar [deviceXs]="deviceXs"></app-navbar>
+<app-navbar (getDetails)="getDetails($event)" [deviceXs]="deviceXs"></app-navbar>
 <!-- <ul>
     <li *ngFor="let item of countires">
       {{ item.name.common }} - {{ item.capital }}
     </li>
 </ul> -->
+<app-details [country]="country" [deviceXs]="deviceXs"></app-details>

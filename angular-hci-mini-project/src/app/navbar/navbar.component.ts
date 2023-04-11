@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms'
 import { Observable, map, startWith } from 'rxjs';
  
@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit{
   filteredOptions: Observable<string[]>;
   countryControl = new FormControl('');
   @Input() deviceXs!: boolean;
+  @Output("getDetails") getDetails: EventEmitter<any> = new EventEmitter();
   
   ngOnInit(){
     const stringList = localStorage.getItem('list');
@@ -37,5 +38,13 @@ export class NavbarComponent implements OnInit{
   }
 
 
-  dugme():void{}
+  dugme():void{
+    if(this.countryControl !== undefined &&
+       this.countryControl.value !== null &&
+        this.options.includes(this.countryControl.value)){
+      this.getDetails.emit(this.countryControl.value);
+    }else{
+      this.getDetails.emit('');
+    }
+  }
 }

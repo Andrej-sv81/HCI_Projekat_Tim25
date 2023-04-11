@@ -1,0 +1,39 @@
+.card{
+    height: 80%;
+    width: 80%;
+}
+
+.cardDiv{
+    margin-top: 20px;
+
+}
+
+.header-div{
+    height: 15%;
+    min-height: 100px;
+}
+
+.vert-divider{
+    height: 100%;
+}
+
+.mat-button{
+    background-color: black;
+    margin-right: 15px;
+}
+
+.label-row{
+    height: 15%;
+    min-height: 60px;
+}
+
+.info-cont{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+label{
+    flex: 1;
+    text-align: center;
+}

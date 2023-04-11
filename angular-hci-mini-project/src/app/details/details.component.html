@@ -1,1 +1,81 @@
-<p>details works!</p>
+<div class="cardDiv" fxLayoutAlign="center">
+    <mat-card class="card" >
+        <div class="header-div" fxLayout="row" fxLayoutAlign="space-between center">
+                <span style="margin-left: 15px;">{{country.name}}</span>
+                <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
+                <span>{{country.flag}}</span>
+                <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
+                <button class="mat-button" mat-button color="accent" *ngIf="!deviceXs" (click)="test()">Button</button>
+                <mat-icon style="margin-right: 15px;"aria-hidden="false" aria-label="Example home icon" fontIcon="close" *ngIf="deviceXs"></mat-icon>
+        </div>
+        <mat-divider></mat-divider>
+        <div *ngIf="!deviceXs" class="info-cont">
+            <div class="label-row" fxLayout="row " fxLayoutAlign="space-around center">
+                <label>Population:</label>
+                <label>{{country.population}}</label>
+                <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
+                <label>Area:</label>
+                <label>{{country.area}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Capital:</label>
+                <label>{{country.capital}}</label>
+                <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
+                <label>Languages:</label>
+                <label>{{country.languages}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Latitude:</label>
+                <label>{{country.latitude}}</label>
+                <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
+                <label>Longitude:</label>
+                <label>{{country.longitude}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Continent:</label>
+                <label>{{country.continents}}</label>
+                <mat-divider class="vert-divider" [vertical]="true"></mat-divider>
+                <label>Time zone:</label>
+                <label>{{country.timezones[0]}}</label>
+            </div>
+        </div>
+
+        <div *ngIf="deviceXs" class="info-cont">
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Population:</label>
+                <label>{{country.population}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Area:</label>
+                <label>{{country.area}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Capital:</label>
+                <label>{{country.capital}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Languages:</label>
+                <label>{{country.languages}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Latitude:</label>
+                <label>{{country.latitude}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Longitude:</label>
+                <label>{{country.longitude}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Continent:</label>
+                <label>{{country.continents}}</label>
+            </div>
+            <div class="label-row" fxLayout="row" fxLayoutAlign="space-around center">
+                <label>Time zone:</label>
+                <label>{{country.timezones[0]}}</label>
+            </div>
+        </div>
+        <div style="height: 650px; background-color: black;"></div>
+        <div style="height: 100px"></div>
+    </mat-card>
+      
+</div>

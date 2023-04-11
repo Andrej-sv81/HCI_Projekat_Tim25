@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DetailsComponent } from './details/details.component'
+import { MatCardModule } from '@angular/material/card'; 
+import {MatDividerModule} from '@angular/material/divider'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { DetailsComponent } from './details/details.component'
     MatButtonModule,
     FormsModule,
     MatFormFieldModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
